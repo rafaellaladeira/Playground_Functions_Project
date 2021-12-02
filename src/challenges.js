@@ -16,17 +16,8 @@ console.log(calcArea(5 , 2));
 
 // Desafio 3
 function splitSentence(string) {
- let conjunto = [];
-  for (let i = 0 ; i < string.length ; i += 1) {
-    if (string[i] !== ' ' ) {
-      conjunto.push(string[i]);
-    } else {
-      string[i] = " , ";
-      conjunto.push(string[i]);   
-    }
-    return conjunto;
-  }
-} 
+  return string.split(" ");
+}
 console.log(splitSentence("go trybe"));
 
 // Desafio 4
@@ -91,12 +82,47 @@ function fizzBuzz(array) {
 console.log(fizzBuzz([7 ,9, 3]));
 
 // Desafio 9
-function encode() {
-  // seu código aqui
+function encode(palavra) {
+  let resultado = "";
+  for (let i = 0; i < palavra.length; i += 1 ) {
+    if (palavra[i] == "a") {
+      resultado += 1;
+    } else if (palavra[i] == "e") {
+      resultado += 2;
+    } else if (palavra[i] == "i") {
+      resultado += 3;
+    } else if (palavra[i] == "o") {
+      resultado += 4;
+    } else if (palavra[i] == "u") {
+     resultado += 5;
+    } else {
+      resultado += palavra[i];
+    }
+  }
+  return resultado;
 }
-function decode() {
-  // seu código aqui
+console.log(encode("bananana"))
+
+function decode(palavra2) {
+  let resultado = "";
+  for (let i = 0; i < palavra2.length; i += 1 ) {
+    if (palavra2[i] == 1) {
+      resultado += "a";
+    } else if (palavra2[i] == 2) {
+      resultado += "e";
+    } else if (palavra2[i] == 3) {
+      resultado += "i";
+    } else if (palavra2[i] == 4) {
+      resultado += "o";
+    } else if (palavra2[i] == 5) {
+     resultado += "u";
+    } else {
+      resultado += palavra2[i];
+    }
+  }
+  return resultado;
 }
+console.log(decode("b1n1n1n1"))
 
 module.exports = {
   calcArea,
