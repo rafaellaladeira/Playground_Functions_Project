@@ -15,24 +15,50 @@ function calcArea(base, height) {
 console.log(calcArea(5 , 2));
 
 // Desafio 3
-function splitSentence() {
-  // seu código aqui
-}
+function splitSentence(string) {
+ let conjunto = [];
+  for (let i = 0 ; i < string.length ; i += 1) {
+    if (string[i] !== ' ' ) {
+      conjunto.push(string[i]);
+    } else {
+      string[i] = " , ";
+      conjunto.push(string[i]);   
+    }
+    return conjunto;
+  }
+} 
+console.log(splitSentence("go trybe"));
 
 // Desafio 4
-function concatName() {
-  // seu código aqui
-}
+function concatName(lista) {  
+  return lista[lista.length -1] + ", " + lista[0];
+  }
+console.log(concatName(['foguete', 'não', 'tem', 'ré']));
 
 // Desafio 5
-function footballPoints() {
-  // seu código aqui
+function footballPoints(wins , ties) {
+  let pontos = wins * 3 + ties;
+  return pontos;
 }
+console.log(footballPoints(0 , 0));
 
 // Desafio 6
-function highestCount() {
-  // seu código aqui
+function highestCount(numeros) {
+  let maiorNumero = numeros[0] ;
+  let quantidade = 0;
+  for (let i = 0 ; i < numeros.length ; i+=1){
+    if (numeros[i] > maiorNumero) {
+      maiorNumero = numeros[i];
+    }
+  }; for (let i = 0 ; i < numeros.length ; i+=1) {
+    if ( maiorNumero === numeros[i]) {
+      quantidade += 1;
+    }
+  }
+  return quantidade;
 }
+console.log(highestCount([-2 ,-2 ,-1]));
+  
 
 // Desafio 7
 function catAndMouse() {
