@@ -18,7 +18,7 @@ console.log(calcArea(5, 2));
 function splitSentence(string) {
   return string.split(" ");
 }
-console.log(splitSentence("go trybe"));
+console.log(splitSentence('go trybe'));
 
 // Desafio 4
 function concatName(lista) {  
@@ -37,12 +37,12 @@ console.log(footballPoints(0, 0));
 function highestCount(numeros) {
   let maiorNumero = numeros[0];
   let quantidade = 0;
-  for (let i = 0; i < numeros.length; i+=1) {
+  for (let i = 0; i < numeros.length; i += 1) {
     if (numeros[i] > maiorNumero) {
       maiorNumero = numeros[i];
     }
-  }; for (let i = 0 ; i < numeros.length ; i+=1) {
-    if ( maiorNumero === numeros[i]) {
+  } for (let i = 0; i < numeros.length; i += 1) {
+    if (maiorNumero === numeros[i]) {
       quantidade += 1;
     }
   }
